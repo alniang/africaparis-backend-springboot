@@ -1,33 +1,31 @@
 package fr.isika.microservice_evenements.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Evenement {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	private String titre;
 	
-	private String description;
+	private String lieu;
 	
-	private String image;
+	private String desc;
+	
+	private String debut;
+	
+	private String fin;
 	
 	public Evenement() {
 		
 	}
-	
-	public Evenement(int id, String titre, String description, String image) {
+
+	public Evenement(int id, String titre, String lieu, String desc, String debut, String fin) {
 		super();
 		this.id = id;
 		this.titre = titre;
-		this.description = description;
-		this.image = image;
+		this.lieu = lieu;
+		this.desc = desc;
+		this.debut = debut;
+		this.fin = fin;
 	}
 
 	public int getId() {
@@ -46,25 +44,41 @@ public class Evenement {
 		this.titre = titre;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getLieu() {
+		return lieu;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setLieu(String lieu) {
+		this.lieu = lieu;
 	}
 
-	public String getImage() {
-		return image;
+	public String getDesc() {
+		return desc;
 	}
 
-	public void setImage(String image) {
-		this.image = image;
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String getDebut() {
+		return debut;
+	}
+
+	public void setDebut(String debut) {
+		this.debut = debut;
+	}
+
+	public String getFin() {
+		return fin;
+	}
+
+	public void setFin(String fin) {
+		this.fin = fin;
 	}
 
 	@Override
 	public String toString() {
-		return "Evenement [id=" + id + ", titre=" + titre + ", description=" + description + ", image=" + image + "]";
-	}
-	
+		return "Evenement [id=" + id + ", titre=" + titre + ", lieu=" + lieu + ", desc=" + desc + ", debut=" + debut
+				+ ", fin=" + fin + "]";
+	}	
 }
