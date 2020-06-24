@@ -10,18 +10,14 @@ import fr.isika.microservice_evenements.model.Evenement;
 import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("/event")
+@RequestMapping("/")
 public class EvenementController {
-	
+
 	private WebClient client = WebClient.create("http://localhost:8282");
-	
-	@GetMapping
-	public Flux<Evenement> getEvenement(){
-		return client.get().uri("/events-api/public/events")
-				.accept(MediaType.APPLICATION_JSON)
-				.retrieve()
-				.bodyToFlux(Evenement.class)
-				.log("retrieve emps :: ");
+
+	@GetMapping(path = "/events-api/public/events")
+	public Flux<Evenement> getEvenement() {
+		return client.get().uri("/events-api/public/events").accept(MediaType.APPLICATION_JSON).retrieve()
+				.bodyToFlux(Evenement.class).log("retrieve emps :: ");
 	}
-	
 }

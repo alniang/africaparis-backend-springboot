@@ -14,11 +14,15 @@ public class Evenement {
 	
 	private String fin;
 	
+	private String logo;
+	
+	private String url;
+	
 	public Evenement() {
 		
 	}
 
-	public Evenement(int id, String titre, String lieu, String desc, String debut, String fin) {
+	public Evenement(int id, String titre, String lieu, String desc, String debut, String fin, String logo, String url) {
 		super();
 		this.id = id;
 		this.titre = titre;
@@ -26,6 +30,8 @@ public class Evenement {
 		this.desc = desc;
 		this.debut = debut;
 		this.fin = fin;
+		this.logo = logo;
+		this.url = url;
 	}
 
 	public int getId() {
@@ -75,10 +81,26 @@ public class Evenement {
 	public void setFin(String fin) {
 		this.fin = fin;
 	}
+	
+	public String getLogo() {
+		return logo;
+	}
+	
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
+	
+	public String getUrl() {
+		return url;
+	}
+	
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
 	@Override
 	public String toString() {
 		return "Evenement [id=" + id + ", titre=" + titre + ", lieu=" + lieu + ", desc=" + desc + ", debut=" + debut
-				+ ", fin=" + fin + "]";
-	}	
+				+ ", fin=" + fin + ", logo=" + logo + ", url=" + url + "]";
+	}
 }
