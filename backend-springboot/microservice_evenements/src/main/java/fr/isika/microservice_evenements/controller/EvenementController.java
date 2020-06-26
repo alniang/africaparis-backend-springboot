@@ -10,7 +10,7 @@ import fr.isika.microservice_evenements.model.Evenement;
 import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/events")
 public class EvenementController {
 
 	private WebClient client = WebClient.create("http://localhost:8282");
