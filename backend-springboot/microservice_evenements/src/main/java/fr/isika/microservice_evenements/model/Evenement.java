@@ -2,7 +2,9 @@ package fr.isika.microservice_evenements.model;
 
 public class Evenement {
 	
-	private int id;
+	//private String _id;
+	
+	private String id;
 	
 	private String titre;
 	
@@ -22,7 +24,7 @@ public class Evenement {
 		
 	}
 
-	public Evenement(int id, String titre, String lieu, String desc, String debut, String fin, String logo, String url) {
+	public Evenement(String id, String titre, String lieu, String desc, String debut, String fin, String logo, String url) {
 		super();
 		this.id = id;
 		this.titre = titre;
@@ -34,11 +36,11 @@ public class Evenement {
 		this.url = url;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
