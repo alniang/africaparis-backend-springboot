@@ -16,6 +16,8 @@ public class Evenement {
 	
 	private String fin;
 	
+	private String heure;
+	
 	private String logo;
 	
 	private String url;
@@ -24,7 +26,7 @@ public class Evenement {
 		
 	}
 
-	public Evenement(String id, String titre, String lieu, String desc, String debut, String fin, String logo, String url) {
+	public Evenement(String id, String titre, String lieu, String desc, String debut, String fin, String heure, String logo, String url) {
 		super();
 		this.id = id;
 		this.titre = titre;
@@ -32,6 +34,7 @@ public class Evenement {
 		this.desc = desc;
 		this.debut = debut;
 		this.fin = fin;
+		this.heure = heure;
 		this.logo = logo;
 		this.url = url;
 	}
@@ -82,6 +85,14 @@ public class Evenement {
 
 	public void setFin(String fin) {
 		this.fin = fin;
+	}
+	
+	public String getHeure() {
+		return heure;
+	}
+	
+	public void setHeure(String heure) {
+		this.heure = heure;
 	}
 	
 	public String getLogo() {
